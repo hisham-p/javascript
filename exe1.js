@@ -19,7 +19,7 @@ function prime(num) {
 
 function array(n) {
   let arr = [2];
-  for (let i = 3; i < n; i += 2) {
+  for (let i = 3; i <= n; i++) {
     if (prime(i)) {
       arr.push(i);
     }
@@ -30,4 +30,4 @@ function array(n) {
   }
   return sum;
 }
-console.log(array(15));
+console.log(array(17));
