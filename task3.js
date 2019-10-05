@@ -10,13 +10,13 @@
 
 function last(arr , n)
 {
+  let array = [];
   if( n != null){
   let array = arr.reverse().splice(0 , n);
     return array.reverse();
 
   }else{
-    let array = arr.reverse().slice(0,1);
-      return array.reverse().join('');
+    return arr[arr.length - 1]
 
   }
 }

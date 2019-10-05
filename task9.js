@@ -16,10 +16,8 @@
   let array = [];
 for (let i=0 ;i < arr.length ; i++)
 { 
-  let row = 'row';
-  let n = i;
-  let num = n.toString();
-  array.push(row.concat(num));
+  let row = `row ${i}`;
+  array.push(row);
   for (let j=0 ;j < arr[i].length ; j++)
   {
     array.push(arr[i][j].toString());

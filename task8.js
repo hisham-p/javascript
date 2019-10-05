@@ -4,18 +4,14 @@
 // the output should be 'tHE qUICK bROWN fOX'.
 
 let word = 'The Quick Brown Fox';
-let arr = [];
-for(let i=0 ; i < word.length ; i++)
+let arr = word.split('');
+for(let i=0 ; i < arr.length ; i++)
 {
-  let temp = word[i];
-  if(temp === word[i].toLowerCase())
+  if(arr[i] === arr[i].toLowerCase())
   {
-    let push1 =temp.toUpperCase()
-    arr.push(push1);
-}else if (temp === word[i].toUpperCase())
-{
-  let push1 =temp.toLowerCase();
-    arr.push(push1);
-}
+    arr[i] = arr[i].toUpperCase();
+  }else{
+    arr[i] = arr[i].toLowerCase();
+  }
 }
 console.log(arr.join(''));
