@@ -5,9 +5,10 @@
 // * * *
 // * * * *
 // * * * * *
+let loop = ' ' , star = "*";
 for (let i = 1; i <= 5; i++) {
-  for (let j = 1; j <=i; j++) {
-    console.log('*');
+  for (let j = i; j <=i; j++) {
+   loop = loop + star;
   }
-  console.log("\n")
+  console.log(loop); 
 }
