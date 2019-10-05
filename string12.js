@@ -8,20 +8,16 @@
 // "hello_world"
 
 function uncamelize(input, n) {
-  let str = input.split('');
-  let nstr = [];
-  for (let i = 0; i < str.length; i++) {
-    let temp = str[i];
-    if (temp === str[i].toLowerCase()) {
-      nstr.push(str[i]);
-    } else if (temp === str[i].toUpperCase()) {
-      nstr.push(n);
-      str[i] = str[i].toLowerCase();
-      nstr.push(str[i]);
+  let str = input.split('')
+  for (let i = str.length - 1; i > 0; i--) {
+    if (str[i] === str[i].toUpperCase()) {
+      str.splice(i, 0, n);
     }
+   
   }
-  return nstr.join('');
+  return str.join('');
 }
+
 console.log(uncamelize('helloWorld'));
 console.log(uncamelize('helloWorld', '-'));
 console.log(uncamelize('helloWorld', '_'));

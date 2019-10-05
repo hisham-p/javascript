@@ -3,14 +3,13 @@
 // console.log(swapcase('AaBbc'));
 // "aAbBC"
 
-function swapcase(input) {
-  let str = input.split('');
+function swapcase(word) {
+  let str = word.split('');
   for (let i = 0; i < str.length; i++) {
-    let temp = str[i];
-    if (temp === str[i].toLowerCase()) {
-      str[i] = temp.toUpperCase()
-    } else if (temp === str[i].toUpperCase()) {
-      str[i] = temp.toLowerCase();
+    if (str[i] === str[i].toLowerCase()) {
+      str[i] = str[i].toUpperCase();
+    } else {
+      str[i] = str[i].toLowerCase();
     }
   }
   return str.join('');
