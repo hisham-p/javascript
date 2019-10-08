@@ -8,20 +8,17 @@
 // ["w3r", "eso", "urc", "e"]
 
 function string_chop(input, n) {
-  let str = input;
+  let str = input.split('');
   let string= [];
   if(n != null)
   {
-  let m=0;
-  // let p=n;
-  for(let i=0; i < n ; i++){
-  string.push(str.slice(0,p));
-  m = n;
-    // m = n;
-  // n=n+p;
+  for(let i=0; i < str.length ; i++){
+  let demo = str.splice(i,n);
+  string.push(demo.join(''));
+  i--;
   }
   }else{
-  string.push(str);
+  string.push(str.join(''));
   }
   return string;
 }
